@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<RestoreFallbackFolders>clear</RestoreFallbackFolders>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<NoWarn>SYSLIB0006,CS8981, CS0219, CA1416, CS0414, CS0169, CS0649, CS8500, CS8321</NoWarn>
+
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)bin\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)bin\</OutputPath>
+	</PropertyGroup>
+  <ItemGroup>
+    <None Remove="imdisk.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="imdisk.exe" />
+  </ItemGroup>
+
+</Project>
